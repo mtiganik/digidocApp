@@ -2,19 +2,64 @@
 //
 
 #include <iostream>
+#include <string>
+#include <fstream>
+#include "include//functions01.h"
+#include "include/Car.h"
+#include "MathLibrary.h"
+
+#include "Exports.h"
+//#include "Container.h"
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+    //cout << DIGIDOCPP_WARNING_DISABLE_CLANG("Hello");
+    // Initialize a Fibonacci relation sequence.
+    fibonacci_init(1, 1);
+    // Write out the sequence values until overflow.
+    do {
+        std::cout << fibonacci_index() << ": "
+            << fibonacci_current() << std::endl;
+    } while (fibonacci_next());
+    // Report count of values written before overflow.
+    std::cout << fibonacci_index() + 1 <<
+        " Fibonacci sequence values fit in an " <<
+        "unsigned 64-bit integer." << std::endl;
+
+
+    //string myText;
+    //ifstream MyReadFile("test.txt");
+    //while (getline(MyReadFile, myText)) {
+    //    // Output the text from the file
+    //    cout << myText << endl;
+    //}
+    //MyReadFile.close();
+    
+    Car car1("BMW", "T-Rock", 2021);
+    Car car2("Tesla", "Model Y", 2023);
+    cout << car1.toString();
+    cout << car2.toString();
+
+    //int i1 = getInteger(1);
+    //int i2 = getInteger(2);
+    //int i3 = getInteger(3);
+    //std::cout << "Sum of " << i1 << ", " << i2 << ", " << i3 << " is " << getSum(i1, i2, i3) << "\n";
+    //std::cout << "Product of " << i1 << ", " << i2 << ", " << i3 << " is " << getProduct(i1, i2, i3) << "\n";
+    //std::cout << "Biggest number of " << i1 << ", " << i2 << ", " << i3 << " is " << getBiggest(i1, i2, i3) << "\n";
+    //std::cout << "Smallest number of " << i1 << ", " << i2 << ", " << i3 << " is " << getSmallest(i1, i2, i3) << "\n";
+
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+//class fileReader {
+//public:
+//    string fileName
+//        
+//    function string readFile(string fileName = fileName) {
+//
+//    }
+//};

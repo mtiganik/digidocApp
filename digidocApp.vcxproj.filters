@@ -18,5 +18,22 @@
     <ClCompile Include="digidocApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\Car.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\functions01.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Car.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\functions01.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="digidocpp.conf" />
   </ItemGroup>
 </Project>
